@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from courses.models import *
 
 # Create your models here.
 
@@ -16,7 +17,7 @@ class Student(models.Model):
 
 class Teacher(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    salary = models.IntegerFiels(null=False, blank=False)
+    salary = models.IntegerField(null=False, blank=False)
     contact = models.IntegerField(blank=False)
     profile_pic = models.ImageField(blank=True, null=True)
     qualifications = models.TextField(blank=False)
