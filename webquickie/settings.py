@@ -125,3 +125,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+
+LOGIN_REDIRECT_URL = '/home/'

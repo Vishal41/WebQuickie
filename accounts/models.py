@@ -5,7 +5,7 @@ from courses.models import *
 # Create your models here.
 
 class Student(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, default=None, on_delete = models.CASCADE)
     college = models.CharField(max_length=100, null=False, blank=False)
     contact = models.IntegerField(blank=False)
     profile_pic = models.ImageField(blank=True, null=True)
@@ -16,7 +16,7 @@ class Student(models.Model):
         return self.name
 
 class Teacher(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, default=None, on_delete = models.CASCADE)
     salary = models.IntegerField(null=False, blank=False)
     contact = models.IntegerField(blank=False)
     profile_pic = models.ImageField(blank=True, null=True)

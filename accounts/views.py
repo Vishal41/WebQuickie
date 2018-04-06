@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.http import HttpResponse
-from .forms import StudentRegistrationForm
+from .forms import *
 from django.contrib.auth import login, authenticate
 
 def RegistrationStudent(request):
